@@ -17,9 +17,9 @@ class hit_record {
         }
 };
 
-class hittalbe {
+class hittable {
     public: 
-        virtual ~hittalbe() = default;
+        virtual ~hittable() = default;
 
         virtual bool hit(const ray& r, interval ray_t, hit_record& rec) const = 0;
 };

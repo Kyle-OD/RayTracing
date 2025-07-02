@@ -3,7 +3,7 @@
 
 #include "hittable.h"
 
-class sphere : public hittalbe {
+class sphere : public hittable {
     public:
         sphere(const point3& center, double radius) : center(center), radius(std::fmax(0,radius)) {}
 

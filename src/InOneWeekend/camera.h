@@ -8,7 +8,7 @@ class camera {
         double aspect_ratio = 1.0; // Ratio of image width over height
         int image_width = 100; // rendered image width in pixel count
 
-        void render(const hittalbe& world) {
+        void render(const hittable& world) {
             initialize();
 
             std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
@@ -59,7 +59,7 @@ class camera {
             pixel00_loc = viewport_upper_left + 0.5*(pixel_delta_u + pixel_delta_v);
         }        
 
-        color ray_color(const ray& r, const hittalbe& world) const {
+        color ray_color(const ray& r, const hittable& world) const {
             hit_record rec;
              
             if (world.hit(r, interval(0, infinity), rec)) {
